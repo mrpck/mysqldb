@@ -3,6 +3,7 @@
   "type": "library",
   "description": "The MySqlDB Class Library is a high level wrapper around the MySql.",
   "version": "1.0.0",
+  "homepage": "https://packagist.org/packages/mrpck/mysqldb",
   "keywords": [
     "laravel",
     "MySql",

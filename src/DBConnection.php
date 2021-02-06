@@ -50,7 +50,6 @@ class DBConnection
 	{
         // import database connection variables
         //require_once __DIR__ . '/db_config.php';
-		require_once 'db_config.php';
 		
 		$this->user = DB_USER;
 		$this->server = DB_SERVER;
