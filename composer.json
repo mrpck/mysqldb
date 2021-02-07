@@ -1,32 +1,33 @@
 {
-  "name": "mrpck/mysqldb",
-  "type": "library",
-  "description": "The MySqlDB Class Library is a high level wrapper around the MySql.",
-  "version": "1.0.1",
-  "homepage": "https://packagist.org/packages/mrpck/mysqldb",
-  "keywords": [
-    "laravel",
-    "MySql",
-    "MySqlDB",
-	"DbConnection",
-    "Database",
-    "ConnectionString"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Michele Rosica",
-      "email": "michelerosica@gmail.com",
-      "homepage": "http://michelerosica.altervista.org/",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=5.4.0"
-  },
-  "autoload": {
-	"psr-4": {
-		"DBConnection\\": "src/"
+	"name": "mrpck/mysqldb",
+	"type": "library",
+	"description": "The MySqlDB Class Library is a high level wrapper around the MySql.",
+	"version": "1.0.2",
+	"homepage": "https://packagist.org/packages/mrpck/mysqldb",
+	"keywords": [
+		"laravel",
+		"MySql",
+		"MySqlDB",
+		"DbConnection",
+		"Database",
+		"ConnectionString"
+	],
+	"license": "MIT",
+	"authors": [
+	{
+	  "name": "Michele Rosica",
+	  "email": "michelerosica@gmail.com",
+	  "homepage": "http://michelerosica.altervista.org/",
+	  "role": "Developer"
 	}
-  }
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": { "Mrpck\\Mysqldb\\": "src/" }
+	},
+	"autoload-dev": {
+		"psr-4": { "Mrpck\\Mysqldb\\Test\\": "tests/" }
+	}
 }
