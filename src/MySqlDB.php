@@ -1,5 +1,5 @@
 <?php
-namespace MySqlDB;
+namespace Mrpck\Mysqldb;
 
 /**
  * A class file to connect to database
@@ -9,7 +9,7 @@ namespace MySqlDB;
  * http://php.net/manual/en/book.mysqli.php
  *
  */
-class DBConnection 
+class MySqlDB 
 {
 	var $db_connect_id;
 	var $query_result;
@@ -17,6 +17,7 @@ class DBConnection
 
 	var $persistency = false;
 	var $user = '';
+	var $password = '';
 	var $server = '';
 	var $dbname = '';
 	
@@ -27,8 +28,13 @@ class DBConnection
 	/**
 	* Constructor
 	*/
-    function __construct() 
+    function __construct($host="localhost", $database=null, $user="root", $password="") 
 	{
+		$this->user = $user;
+		$this->password = $password;
+		$this->server = $host;
+		$this->dbname = $database;
+
         // connecting to database
         $this->sql_connect();
     }
@@ -48,15 +54,8 @@ class DBConnection
 	*/
 	private function sql_connect()
 	{
-        // import database connection variables
-        //require_once __DIR__ . '/db_config.php';
-		
-		$this->user = DB_USER;
-		$this->server = DB_SERVER;
-		$this->dbname = DB_DATABASE;
-
         // Connecting to mysql database
-        $this->db_connect_id = @mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+        $this->db_connect_id = @mysqli_connect($this->server, $this->user, $this->password, $this->dbname);
 		
 		// Check connection
 		if (!mysqli_connect_errno())

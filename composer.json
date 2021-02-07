@@ -2,7 +2,7 @@
 	"name": "mrpck/mysqldb",
 	"type": "library",
 	"description": "The MySqlDB Class Library is a high level wrapper around the MySql.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"homepage": "https://packagist.org/packages/mrpck/mysqldb",
 	"keywords": [
 		"laravel",
