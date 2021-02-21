@@ -7,7 +7,7 @@ Copy the files under `src/` to your program
 OR
 
 ```bash
-composer require websvc/php-mysql-db 1.0.2
+composer require mrpck/mysqldb 1.0.2
 ```
 
 
